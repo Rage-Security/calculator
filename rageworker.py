@@ -19,7 +19,7 @@ with open('lp','w') as lpf:
 PORT = addr[1]
 
 
-subprocess.Popen(['./main'])
+subprocess.Popen(['python3','main.py'])
 
 
 handler = http.server.SimpleHTTPRequestHandler
