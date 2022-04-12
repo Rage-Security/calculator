@@ -44,14 +44,18 @@ class Browser(QWebEngineView,QtWidgets.QMainWindow):
 
         process()
 
-
+'''
 with open('lp','r') as lpf:
     lp = lpf.read()
+'''
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+htmlpath = 'file:///'+dir_path+'/index.html'
 
 app = QtWidgets.QApplication(sys.argv)
 b = Browser()
 
-b.load(QtCore.QUrl(f'http://127.0.0.1:{lp}'))
+b.load(QtCore.QUrl(htmlpath))
 b.show()
 app.exec_()
 
